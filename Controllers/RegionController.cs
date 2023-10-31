@@ -1,5 +1,6 @@
 using CaminhadasAPI.Data;
 using CaminhadasAPI.Models.Domain;
+using CaminhadasAPI.Models.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CaminhadasAPI.Controllers;
@@ -17,7 +18,17 @@ public class RegionController : ControllerBase{
     [ProducesResponseType(StatusCodes.Status200OK)]
     public IActionResult GetAllRegions() {
         var regions = _ctx.Regions.ToList();
-        return Ok(regions);
+
+        var regionsDto = new List<RegionDTO>();
+        foreach (var region in regions) {
+            regionsDto.Add(new RegionDTO() {
+                Code = region.Code,
+                Name = region.Name,
+                ImageUrl = region.RegionImageUrl
+            });
+        }
+        
+        return Ok(regionsDto);
     }
 
     [HttpGet]
@@ -33,6 +44,12 @@ public class RegionController : ControllerBase{
             return NotFound("Region not found");
         }
 
-        return Ok(region);
+        var regionDto = new RegionDTO {
+            Name = region.Name,
+            Code = region.Code,
+            ImageUrl = region.RegionImageUrl
+        };
+
+        return Ok(regionDto);
     }
 }
