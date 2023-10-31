@@ -119,6 +119,10 @@ public class RegionController : ControllerBase{
 
         var regionToBeDeleted = _ctx.Regions.FirstOrDefault(r => r.Id == id);
 
+        if (regionToBeDeleted == null) {
+            return NotFound("Região não encontrada para ser deletada");
+        }
+
         _ctx.Regions.Remove(regionToBeDeleted);
         _ctx.SaveChanges();
 
