@@ -57,7 +57,7 @@ public class RegionController : ControllerBase{
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public IActionResult CreateRegion([FromBody] AddRegionRequestDto? regionRequestDto) {
+    public IActionResult CreateRegion([FromBody] RegionDTO? regionRequestDto) {
         if (regionRequestDto == null) {
             return BadRequest("Você deve passar uma região");
         }
