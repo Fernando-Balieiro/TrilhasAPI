@@ -1,4 +1,5 @@
 using CaminhadasAPI.Models.Domain;
+using CaminhadasAPI.Models.DTOs;
 
 namespace CaminhadasAPI.Interfaces; 
 
@@ -7,7 +8,7 @@ public interface IRegionRepository {
     Task<Region?> GetRegionById(Guid? id);
     Task<Region> Create(Region region);
 
-    Task<Region?> Update(Guid? id, Region? regionToUpdate);
+    Task<RegionDTO?> Update(Guid? id, Region? regionToUpdate);
     Task<Region?> Delete(Guid? id);
 
 }

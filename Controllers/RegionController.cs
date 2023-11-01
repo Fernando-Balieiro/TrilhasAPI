@@ -1,22 +1,21 @@
+using AutoMapper;
 using CaminhadasAPI.Data;
 using CaminhadasAPI.Interfaces;
 using CaminhadasAPI.Models.Domain;
 using CaminhadasAPI.Models.DTOs;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace CaminhadasAPI.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
 public class RegionController : ControllerBase{
-    private readonly AppDbContext _ctx;
     private readonly IRegionRepository _repo;
+    private readonly IMapper _mapper;
 
-    public RegionController(AppDbContext ctx, IRegionRepository repo) {
-        _ctx = ctx;
+    public RegionController(IRegionRepository repo, IMapper mapper) {
         _repo = repo;
+        _mapper = mapper;
     }
 
     [HttpGet]
@@ -24,14 +23,19 @@ public class RegionController : ControllerBase{
     public async Task<IActionResult> GetAllRegions() {
         var regions = await _repo.GetAllRegions();
 
+        /*
         var regionsDto = regions
             .Select(region => new RegionDTO() 
                 { 
                 Code = region.Code,
                 Name = region.Name,
-                ImageUrl = region.RegionImageUrl 
+                RegionImageUrl = region.RegionImageUrl 
                 })
             .ToList();
+        */
+
+        // Transforma map domain model para DTO
+        var regionsDto = _mapper.Map<List<RegionDTO>>(regions);
 
         return Ok(regionsDto);
     }
@@ -53,7 +57,7 @@ public class RegionController : ControllerBase{
         var regionDto = new RegionDTO {
             Name = region.Name,
             Code = region.Code,
-            ImageUrl = region.RegionImageUrl
+            RegionImageUrl = region.RegionImageUrl
         };
 
         return Ok(regionDto);
@@ -73,7 +77,7 @@ public class RegionController : ControllerBase{
         var regionDomainModel = new Region {
             Code = regionRequestDto.Code,
             Name = regionRequestDto.Name,
-            RegionImageUrl = regionRequestDto.ImageUrl
+            RegionImageUrl = regionRequestDto.RegionImageUrl
         };
 
         await _repo.Create(regionDomainModel);
@@ -81,7 +85,7 @@ public class RegionController : ControllerBase{
         var regionDto = new RegionDTO {
             Name = regionDomainModel.Name,
             Code = regionDomainModel.Code,
-            ImageUrl = regionDomainModel.RegionImageUrl
+            RegionImageUrl = regionDomainModel.RegionImageUrl
         };
 
         return CreatedAtAction(nameof(GetRegionsById), new {id = regionDomainModel.Id}, regionDto);
@@ -92,11 +96,12 @@ public class RegionController : ControllerBase{
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> ChangeRegion([FromRoute] Guid? id, [FromBody] RegionDTO? updateRegionDto) {
-        var regionDomainModel = new Region {
-            Code = updateRegionDto.Code,
-            Name = updateRegionDto.Name,
-            RegionImageUrl = updateRegionDto.ImageUrl,
-        };
+        // var regionDomainModel = new Region {
+        //     Code = updateRegionDto.Code,
+        //     Name = updateRegionDto.Name,
+        //     RegionImageUrl = updateRegionDto.RegionImageUrl,
+        // };
+        var updateRegionDomain = _mapper.Map<Region>(updateRegionDto);
         
         if (id == null) {
             return NotFound("Envie um id para a request");
@@ -110,14 +115,9 @@ public class RegionController : ControllerBase{
             return BadRequest("Passe um modelo válido para a request");
         }
 
-        var regionToUpdate = _ctx.Regions.FirstOrDefault(r => r.Id == id);
+        var regionToUpdate = await _repo.Update(id, updateRegionDomain);
 
-        if (regionToUpdate == null) {
-            return NotFound("Não foi encontrada a região para ser atualizada");
-        }
-
-        var updatedRegion = await _repo.Update(id, regionDomainModel);
-        return Ok(updatedRegion);
+        return Ok(regionToUpdate);
     }
 
     [HttpDelete]
@@ -134,7 +134,7 @@ public class RegionController : ControllerBase{
         var regionDto = new RegionDTO {
             Name = regionDomainModel.Name,
             Code = regionDomainModel.Code,
-            ImageUrl = regionDomainModel?.RegionImageUrl
+            RegionImageUrl = regionDomainModel?.RegionImageUrl
         };
 
         return Ok(regionDto);

@@ -11,8 +11,8 @@ public class Walk {
     public string? WalkImageUrl { get; set; }
     
     [ForeignKey("Difficulty")] public Guid DifficultyId { get; set; }
-    public Difficulty Difficulty { get; set; }
+    public Difficulty? Difficulty { get; set; }
     
     [ForeignKey("Region")] public Guid RegionId { get; set; }
-    public Region Region { get; set; }
+    public Region? Region { get; set; }
 }

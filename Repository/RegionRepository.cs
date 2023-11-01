@@ -1,15 +1,19 @@
+using AutoMapper;
 using CaminhadasAPI.Data;
 using CaminhadasAPI.Interfaces;
 using CaminhadasAPI.Models.Domain;
+using CaminhadasAPI.Models.DTOs;
 using Microsoft.EntityFrameworkCore;
 
 namespace CaminhadasAPI.Repository; 
 
 public class RegionRepository : IRegionRepository{
     private readonly AppDbContext _ctx;
+    private readonly IMapper _mapper;
 
-    public RegionRepository(AppDbContext ctx) {
+    public RegionRepository(AppDbContext ctx, IMapper mapper) {
         _ctx = ctx;
+        _mapper = mapper;
     }
     
     public async Task<List<Region?>> GetAllRegions() {
@@ -26,15 +30,21 @@ public class RegionRepository : IRegionRepository{
         return region;
     }
 
-    public async Task<Region?> Update(Guid? id, Region? regionToUpdate) {
-        var existingRegion = await _ctx.Regions.FirstOrDefaultAsync(r => r.Id == id);
+    public async Task<RegionDTO?> Update(Guid? id, Region? regionToUpdate) {
+        var existingRegion = await _ctx.Regions.FirstOrDefaultAsync(r => r != null && r.Id == id);
 
-        existingRegion.Code = regionToUpdate.Code;
-        existingRegion.Name = regionToUpdate.Name;
-        existingRegion.RegionImageUrl = regionToUpdate.RegionImageUrl;
+        if (existingRegion is null) {
+            return null;
+        }
 
+        existingRegion.Code = regionToUpdate?.Code;
+        existingRegion.Name = regionToUpdate?.Name;
+        existingRegion.RegionImageUrl = regionToUpdate?.RegionImageUrl;
+
+        var updatedRegionDto = _mapper.Map<RegionDTO>(existingRegion);
+        
         await _ctx.SaveChangesAsync();
-        return existingRegion;
+        return updatedRegionDto;
     }
 
     public async Task<Region?> Delete(Guid? id) {
@@ -49,4 +59,6 @@ public class RegionRepository : IRegionRepository{
         await _ctx.SaveChangesAsync();
         return deletedRegion;
     }
+
+
 }

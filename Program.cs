@@ -1,5 +1,6 @@
 using CaminhadasAPI.Data;
 using CaminhadasAPI.Interfaces;
+using CaminhadasAPI.Mappings;
 using CaminhadasAPI.Repository;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,7 @@ builder.Services.AddDbContext<AppDbContext>(options => {
 });
 
 builder.Services.AddScoped<IRegionRepository, RegionRepository>();
+builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
