@@ -11,8 +11,12 @@
     <list default="true" id="ff5775bf-47d3-42d5-8ccc-5a250be3a642" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CaminhadasAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaminhadasAPI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/RegionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/RegionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTOs/RegionDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTOs/RegionDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/CaminhadasAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/CaminhadasAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/CaminhadasAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/ref/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/ref/CaminhadasAPI.dll" afterDir="false" />
@@ -137,7 +141,7 @@
       <workItem from="1698776745898" duration="3432000" />
       <workItem from="1698784984443" duration="4213000" />
       <workItem from="1698792516082" duration="30000" />
-      <workItem from="1698840152485" duration="1452000" />
+      <workItem from="1698840152485" duration="10101000" />
     </task>
     <servers />
   </component>
