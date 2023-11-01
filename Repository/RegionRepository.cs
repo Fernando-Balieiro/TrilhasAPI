@@ -16,7 +16,7 @@ public class RegionRepository : IRegionRepository{
         _mapper = mapper;
     }
     
-    public async Task<List<Region?>> GetAllRegions() {
+    public async Task<List<Region>> GetAllRegions() {
         return await _ctx.Regions.ToListAsync();
     }
 
@@ -31,7 +31,7 @@ public class RegionRepository : IRegionRepository{
     }
 
     public async Task<RegionDTO?> Update(Guid? id, Region? regionToUpdate) {
-        var existingRegion = await _ctx.Regions.FirstOrDefaultAsync(r => r != null && r.Id == id);
+        var existingRegion = await _ctx.Regions.FirstOrDefaultAsync(r => r.Id == id);
 
         if (existingRegion is null) {
             return null;
@@ -54,6 +54,10 @@ public class RegionRepository : IRegionRepository{
         
         var deletedRegion = await _ctx.Regions
             .FirstOrDefaultAsync(x => x.Id == id);
+
+        if (deletedRegion is null) {
+            return null;
+        }
 
         _ctx.Regions.Remove(deletedRegion);
         await _ctx.SaveChangesAsync();

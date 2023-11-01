@@ -4,7 +4,7 @@ using CaminhadasAPI.Models.DTOs;
 namespace CaminhadasAPI.Interfaces; 
 
 public interface IRegionRepository {
-    Task<List<Region?>> GetAllRegions();
+    Task<List<Region>> GetAllRegions();
     Task<Region?> GetRegionById(Guid? id);
     Task<Region> Create(Region region);
 
