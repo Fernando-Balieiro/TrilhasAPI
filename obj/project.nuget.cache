@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "2X1rQiMG9Eztk5ryqhufjk3BPLyym8rw4Y1FO6JVwRm5Dc7brodAOJlCoJLZtzmT5KJuxOYaCOBZIlGn/dkUZA==",
+  "dgSpecHash": "3yYGv40U4Nr003vPxzB8+lMunL48NJHwU0Zoy0/tN6LZrvfrAcKjSHszDUr3PqxPpYYho2mfWW2fqQxpZFkmhA==",
   "success": true,
   "projectFilePath": "/home/FernandoPC/Documents/TrilhasAPI/CaminhadasAPI.csproj",
   "expectedPackageFiles": [
+    "/home/FernandoPC/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/home/FernandoPC/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/home/FernandoPC/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/FernandoPC/.nuget/packages/microsoft.aspnetcore.openapi/7.0.12/microsoft.aspnetcore.openapi.7.0.12.nupkg.sha512",
+    "/home/FernandoPC/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/home/FernandoPC/.nuget/packages/microsoft.entityframeworkcore/7.0.13/microsoft.entityframeworkcore.7.0.13.nupkg.sha512",
     "/home/FernandoPC/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.13/microsoft.entityframeworkcore.abstractions.7.0.13.nupkg.sha512",
     "/home/FernandoPC/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.13/microsoft.entityframeworkcore.analyzers.7.0.13.nupkg.sha512",

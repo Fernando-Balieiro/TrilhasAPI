@@ -84,3 +84,5 @@
 /home/FernandoPC/Documents/TrilhasAPI/obj/Debug/net7.0/CaminhadasAPI.pdb
 /home/FernandoPC/Documents/TrilhasAPI/obj/Debug/net7.0/CaminhadasAPI.genruntimeconfig.cache
 /home/FernandoPC/Documents/TrilhasAPI/obj/Debug/net7.0/ref/CaminhadasAPI.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/AutoMapper.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
