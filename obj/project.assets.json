@@ -1453,11 +1453,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/FernandoPC/Documents/CaminhadasAPI/CaminhadasAPI.csproj",
+      "projectUniqueName": "/home/FernandoPC/Documents/TrilhasAPI/CaminhadasAPI.csproj",
       "projectName": "CaminhadasAPI",
-      "projectPath": "/home/FernandoPC/Documents/CaminhadasAPI/CaminhadasAPI.csproj",
+      "projectPath": "/home/FernandoPC/Documents/TrilhasAPI/CaminhadasAPI.csproj",
       "packagesPath": "/home/FernandoPC/.nuget/packages/",
-      "outputPath": "/home/FernandoPC/Documents/CaminhadasAPI/obj/",
+      "outputPath": "/home/FernandoPC/Documents/TrilhasAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/FernandoPC/.nuget/NuGet/NuGet.Config"

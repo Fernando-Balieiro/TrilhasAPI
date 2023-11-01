@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DweEkfqNpaL89WSSINDe7yR9TiE7zlNv8ycY5/lKDcULc0SQ1zOHV73Fefhv7AvSZv4dO5z9mc78qUulnA3tJA==",
+  "dgSpecHash": "2X1rQiMG9Eztk5ryqhufjk3BPLyym8rw4Y1FO6JVwRm5Dc7brodAOJlCoJLZtzmT5KJuxOYaCOBZIlGn/dkUZA==",
   "success": true,
-  "projectFilePath": "/home/FernandoPC/Documents/CaminhadasAPI/CaminhadasAPI.csproj",
+  "projectFilePath": "/home/FernandoPC/Documents/TrilhasAPI/CaminhadasAPI.csproj",
   "expectedPackageFiles": [
     "/home/FernandoPC/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/FernandoPC/.nuget/packages/microsoft.aspnetcore.openapi/7.0.12/microsoft.aspnetcore.openapi.7.0.12.nupkg.sha512",
