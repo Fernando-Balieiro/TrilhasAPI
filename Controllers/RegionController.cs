@@ -3,6 +3,7 @@ using CaminhadasAPI.Models.Domain;
 using CaminhadasAPI.Models.DTOs;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CaminhadasAPI.Controllers;
 
@@ -17,18 +18,18 @@ public class RegionController : ControllerBase{
 
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public IActionResult GetAllRegions() {
-        var regions = _ctx.Regions.ToList();
+    public async Task<IActionResult> GetAllRegions() {
+        var regions = await _ctx.Regions.ToListAsync();
 
-        var regionsDto = new List<RegionDTO>();
-        foreach (var region in regions) {
-            regionsDto.Add(new RegionDTO() {
+        var regionsDto = regions
+            .Select(region => new RegionDTO() 
+                { 
                 Code = region.Code,
                 Name = region.Name,
-                ImageUrl = region.RegionImageUrl
-            });
-        }
-        
+                ImageUrl = region.RegionImageUrl 
+                })
+            .ToList();
+
         return Ok(regionsDto);
     }
 
@@ -36,11 +37,11 @@ public class RegionController : ControllerBase{
     [Route("{id:guid}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public IActionResult GetRegionsById([FromRoute] Guid? id) {
+    public async Task<IActionResult> GetRegionsById([FromRoute] Guid? id) {
         if (id == null) {
             return NotFound("Id passed was null");
         }
-        var region = _ctx.Regions.FirstOrDefault(r => r.Id == id);
+        var region = await _ctx.Regions.FirstOrDefaultAsync(r => r.Id == id);
         if (region == null) {
             return NotFound("Region not found");
         }
@@ -57,7 +58,7 @@ public class RegionController : ControllerBase{
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public IActionResult CreateRegion([FromBody] RegionDTO? regionRequestDto) {
+    public async Task<IActionResult> CreateRegion([FromBody] RegionDTO? regionRequestDto) {
         if (regionRequestDto == null) {
             return BadRequest("Você deve passar uma região");
         }
@@ -72,7 +73,7 @@ public class RegionController : ControllerBase{
         };
 
         _ctx.Regions.Add(regionDomainModel);
-        _ctx.SaveChanges();
+        await _ctx.SaveChangesAsync();
 
         var regionDto = new RegionDTO {
             Name = regionDomainModel.Name,
@@ -87,7 +88,7 @@ public class RegionController : ControllerBase{
     [Route("{id:guid}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public IActionResult ChangeRegion([FromRoute] Guid? id, [FromBody] RegionDTO updateRegionDto) {
+    public async Task<IActionResult> ChangeRegion([FromRoute] Guid? id, [FromBody] RegionDTO? updateRegionDto) {
         if (id == null) {
             return NotFound("Envie um id para a request");
         }
@@ -96,13 +97,19 @@ public class RegionController : ControllerBase{
             return NoContent();
         }
 
+        if (!ModelState.IsValid) {
+            return BadRequest("Passe um modelo válido para a request");
+        }
+
         var regionToUpdate = _ctx.Regions.FirstOrDefault(r => r.Id == id);
 
-        regionToUpdate.Code = updateRegionDto.Code;
-        regionToUpdate.Name = updateRegionDto.Name;
-        regionToUpdate.RegionImageUrl = updateRegionDto.ImageUrl;
+        if (regionToUpdate != null) {
+            regionToUpdate.Code = updateRegionDto.Code;
+            regionToUpdate.Name = updateRegionDto.Name;
+            regionToUpdate.RegionImageUrl = updateRegionDto.ImageUrl;
+        }
 
-        _ctx.SaveChanges();
+        await _ctx.SaveChangesAsync();
         
 
         return Ok(updateRegionDto);
@@ -112,19 +119,19 @@ public class RegionController : ControllerBase{
     [Route("{id:guid}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public IActionResult DeleteRegion([FromRoute] Guid? id) {
+    public async Task<IActionResult> DeleteRegion([FromRoute] Guid? id) {
         if (id == null) {
             return BadRequest("Passe o id da trilha a ser deletada");
         }
 
-        var regionToBeDeleted = _ctx.Regions.FirstOrDefault(r => r.Id == id);
+        var regionToBeDeleted = await _ctx.Regions.FirstOrDefaultAsync(r => r.Id == id);
 
         if (regionToBeDeleted == null) {
             return NotFound("Região não encontrada para ser deletada");
         }
 
         _ctx.Regions.Remove(regionToBeDeleted);
-        _ctx.SaveChanges();
+        await _ctx.SaveChangesAsync();
 
         return Ok("Região deletada com sucesso");
     }
