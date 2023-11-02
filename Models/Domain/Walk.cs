@@ -6,7 +6,7 @@ namespace CaminhadasAPI.Models.Domain;
 public class Walk {
     [Required] public Guid Id { get; set; }
     [Required] public string? Name { get; set; }
-    [Required] public string? Descrition { get; set; }
+    [Required] public string? Description { get; set; }
     [Required] public double LengthInKm { get; set; }
     public string? WalkImageUrl { get; set; }
     

@@ -7,5 +7,8 @@ namespace CaminhadasAPI.Mappings;
 public class AutoMapperProfiles : Profile {
     public AutoMapperProfiles() {
         CreateMap<Region, RegionDTO>().ReverseMap();
+        CreateMap<Walk, WalkDto>().ReverseMap();
+        CreateMap<Difficulty, DifficultyDto>().ReverseMap();
+        CreateMap<AddWalkRequestDto, Walk>().ReverseMap();
     }
 }
