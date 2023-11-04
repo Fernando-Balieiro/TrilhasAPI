@@ -10,33 +10,16 @@
   <component name="ChangeListManager">
     <list default="true" id="ff5775bf-47d3-42d5-8ccc-5a250be3a642" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CaminhadasAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaminhadasAPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mappings/AutoMapperProfiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mappings/AutoMapperProfiles.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Domain/Walk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Domain/Walk.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/WalksController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/WalksController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IWalksRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/IWalksRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTOs/WalkDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTOs/WalkDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repository/SqlWalkRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/SqlWalkRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/CaminhadasAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/CaminhadasAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/CaminhadasAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/linux-x64/CaminhadasAPI.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/linux-x64/CaminhadasAPI.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/linux-x64/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/linux-x64/CaminhadasAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/linux-x64/CaminhadasAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/linux-x64/CaminhadasAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.genruntimeconfig.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/ref/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/ref/CaminhadasAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/refint/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/refint/CaminhadasAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/ref/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/ref/CaminhadasAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/refint/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/refint/CaminhadasAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,30 +52,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/FernandoPC/Documents/GestaoEscolar/GestaoEscolar.sln",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/FernandoPC/Documents/GestaoEscolar/GestaoEscolar.sln&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/home/FernandoPC/.config/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
-      "/home/FernandoPC/.config/JetBrains/Rider2023.2/resharper-host/SourcesCache",
-      "/home/FernandoPC/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/home/FernandoPC/.config/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
+      &quot;/home/FernandoPC/.config/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
+      &quot;/home/FernandoPC/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.CaminhadasAPI: http">
     <configuration name="CaminhadasAPI: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/CaminhadasAPI.csproj" />
@@ -165,7 +148,8 @@
       <workItem from="1698792516082" duration="30000" />
       <workItem from="1698840152485" duration="16253000" />
       <workItem from="1698893356415" duration="3806000" />
-      <workItem from="1698943477273" duration="1539000" />
+      <workItem from="1698943477273" duration="3931000" />
+      <workItem from="1699132081240" duration="1437000" />
     </task>
     <servers />
   </component>

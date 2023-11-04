@@ -26,4 +26,12 @@ public class WalksController : ControllerBase{
         return Ok(_mapper.Map<AddWalkRequestDto>(walkDomainModel));
     }
 
+    [HttpGet]
+    public async Task<IActionResult> GetAll() {
+        var walkList = await _repo.GetAllWalks();
+        if (walkList == null) {
+            return NoContent();
+        }
+        return Ok(_mapper.Map<List<WalkDto>>(walkList));
+    }
 }

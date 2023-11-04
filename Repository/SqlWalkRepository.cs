@@ -2,6 +2,7 @@ using CaminhadasAPI.Data;
 using CaminhadasAPI.Interfaces;
 using CaminhadasAPI.Models.Domain;
 using CaminhadasAPI.Models.DTOs;
+using Microsoft.EntityFrameworkCore;
 
 namespace CaminhadasAPI.Repository; 
 
@@ -18,10 +19,13 @@ public class SqlWalkRepository : IWalksRepository{
         return walk;
     }
 
-    public Task<List<Walk>> GetAllWalks(string? filterOn = null, string? filterQuery = null, string? sortBy = null, bool isAscending = true,
-        int pageNumber = 1, int pageSize = 1000) {
-        throw new NotImplementedException();
+    public async Task<List<Walk>?> GetAllWalks() {
+        return await _ctx.Walks
+            .Include(x => x.Difficulty)
+            .Include(x => x.Region)
+            .ToListAsync();
     }
+
 
     public Task<Walk?> GetById(Guid id) {
         throw new NotImplementedException();
