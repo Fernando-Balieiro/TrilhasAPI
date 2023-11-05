@@ -10,16 +10,33 @@
   <component name="ChangeListManager">
     <list default="true" id="ff5775bf-47d3-42d5-8ccc-5a250be3a642" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CaminhadasAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaminhadasAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/RegionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/RegionController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/WalksController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/WalksController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interfaces/IWalksRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/IWalksRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IRegionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/IRegionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mappings/AutoMapperProfiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Mappings/AutoMapperProfiles.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTOs/DifficultyDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTOs/DifficultyDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTOs/RegionDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTOs/RegionDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/DTOs/WalkDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTOs/WalkDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repository/RegionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/RegionRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Repository/SqlWalkRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/SqlWalkRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/CaminhadasAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/CaminhadasAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/CaminhadasAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/linux-x64/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/linux-x64/CaminhadasAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/linux-x64/CaminhadasAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/linux-x64/CaminhadasAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/CaminhadasAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/ref/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/ref/CaminhadasAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/refint/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/linux-x64/refint/CaminhadasAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/ref/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/ref/CaminhadasAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/refint/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/refint/CaminhadasAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +167,7 @@
       <workItem from="1698893356415" duration="3806000" />
       <workItem from="1698943477273" duration="3931000" />
       <workItem from="1699132081240" duration="1437000" />
+      <workItem from="1699147635341" duration="3331000" />
     </task>
     <servers />
   </component>
