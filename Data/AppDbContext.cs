@@ -59,7 +59,7 @@ public class AppDbContext : DbContext{
             new Region() {
               Id  = Guid.NewGuid(),
               Name = "Mato Grosso",
-              Code = "MG",
+              Code = "MT",
               RegionImageUrl = 
                   "https://blog.entretrilhas.com.br/wp-content/uploads/2022/02/trekking_02-1024x576.jpg",
             },

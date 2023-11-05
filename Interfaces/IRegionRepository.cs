@@ -8,7 +8,7 @@ public interface IRegionRepository {
     Task<Region?> GetRegionById(Guid? id);
     Task<Region> Create(Region region);
 
-    Task<RegionDTO?> Update(Guid? id, Region? regionToUpdate);
+    Task<RegionDto?> Update(Guid? id, Region? regionToUpdate);
     Task<Region?> Delete(Guid? id);
 
 }
