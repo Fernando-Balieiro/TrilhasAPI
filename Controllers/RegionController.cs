@@ -35,7 +35,7 @@ public class RegionController : ControllerBase{
         */
 
         // Transforma map domain model para DTO
-        var regionsDto = _mapper.Map<List<RegionDTO>>(regions);
+        var regionsDto = _mapper.Map<List<RegionDto>>(regions);
 
         return Ok(regionsDto);
     }
@@ -54,7 +54,7 @@ public class RegionController : ControllerBase{
             return NotFound("Region not found");
         }
 
-        var regionDto = new RegionDTO {
+        var regionDto = new RegionDto {
             Name = region.Name,
             Code = region.Code,
             RegionImageUrl = region.RegionImageUrl
@@ -66,7 +66,7 @@ public class RegionController : ControllerBase{
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> CreateRegion([FromBody] RegionDTO? regionRequestDto) {
+    public async Task<IActionResult> CreateRegion([FromBody] RegionDto? regionRequestDto) {
         if (regionRequestDto == null) {
             return BadRequest("Você deve passar uma região");
         }
@@ -82,7 +82,7 @@ public class RegionController : ControllerBase{
 
         await _repo.Create(regionDomainModel);
 
-        var regionDto = new RegionDTO {
+        var regionDto = new RegionDto {
             Name = regionDomainModel.Name,
             Code = regionDomainModel.Code,
             RegionImageUrl = regionDomainModel.RegionImageUrl
@@ -95,7 +95,7 @@ public class RegionController : ControllerBase{
     [Route("{id:guid}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> ChangeRegion([FromRoute] Guid? id, [FromBody] RegionDTO? updateRegionDto) {
+    public async Task<IActionResult> ChangeRegion([FromRoute] Guid? id, [FromBody] RegionDto? updateRegionDto) {
         // var regionDomainModel = new Region {
         //     Code = updateRegionDto.Code,
         //     Name = updateRegionDto.Name,
@@ -131,7 +131,7 @@ public class RegionController : ControllerBase{
             return NotFound();
         }
 
-        var regionDto = new RegionDTO {
+        var regionDto = new RegionDto {
             Name = regionDomainModel.Name,
             Code = regionDomainModel.Code,
             RegionImageUrl = regionDomainModel?.RegionImageUrl

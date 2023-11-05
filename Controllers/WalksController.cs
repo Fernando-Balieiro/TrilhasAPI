@@ -34,4 +34,43 @@ public class WalksController : ControllerBase{
         }
         return Ok(_mapper.Map<List<WalkDto>>(walkList));
     }
+
+    [HttpGet]
+    [Route("{id:guid}")]
+    public async Task<IActionResult> GetWalkById(Guid id) {
+        var walkById = await _repo.GetById(id);
+        if (walkById is null) {
+            return NotFound();
+        }
+
+        return Ok(_mapper.Map<WalkDto>(walkById));
+    }
+
+    [HttpPut]
+    [Route("{id:guid}")]
+    public async Task<IActionResult> UpdateWalk([FromRoute] Guid id, [FromBody] UpdateWalkDto updateWalkDto) {
+        if (!ModelState.IsValid) {
+            return BadRequest("Passe uma request válida");
+        }
+        var walkDomainModel = _mapper.Map<Walk>(updateWalkDto);
+        if (walkDomainModel is null) {
+            return NotFound("Nada foi encontrado no banco de dados");
+        }
+
+        await _repo.UpdateAsync(id, walkDomainModel);
+        return Ok(_mapper.Map<WalkDto>(walkDomainModel));
+    }
+
+    [HttpDelete]
+    [Route("{id:guid}")]
+    public async Task<IActionResult> DeleteById([FromRoute] Guid id) {
+        var deletedWalk = await _repo.DeleteAsync(id);
+
+        if (deletedWalk is null) {
+            return BadRequest();
+        }
+
+        return Ok(_mapper.Map<WalkDto>(deletedWalk));
+
+    }
 }
