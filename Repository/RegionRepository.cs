@@ -30,7 +30,7 @@ public class RegionRepository : IRegionRepository{
         return region;
     }
 
-    public async Task<RegionDTO?> Update(Guid? id, Region? regionToUpdate) {
+    public async Task<RegionDto?> Update(Guid? id, Region? regionToUpdate) {
         var existingRegion = await _ctx.Regions.FirstOrDefaultAsync(r => r.Id == id);
 
         if (existingRegion is null) {
@@ -41,7 +41,7 @@ public class RegionRepository : IRegionRepository{
         existingRegion.Name = regionToUpdate?.Name;
         existingRegion.RegionImageUrl = regionToUpdate?.RegionImageUrl;
 
-        var updatedRegionDto = _mapper.Map<RegionDTO>(existingRegion);
+        var updatedRegionDto = _mapper.Map<RegionDto>(existingRegion);
         
         await _ctx.SaveChangesAsync();
         return updatedRegionDto;

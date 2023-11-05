@@ -27,15 +27,43 @@ public class SqlWalkRepository : IWalksRepository{
     }
 
 
-    public Task<Walk?> GetById(Guid id) {
-        throw new NotImplementedException();
+    public async Task<Walk?> GetById(Guid id) {
+        return await _ctx.Walks
+            .Include(x => x.Region)
+            .Include(x => x.Difficulty)
+            .FirstOrDefaultAsync(x => x.Id == id);
     }
 
-    public Task<Walk?> UpdateAsync(Guid id, Walk walk) {
-        throw new NotImplementedException();
+    public async Task<Walk?> UpdateAsync(Guid id, Walk walk) {
+        var existingWalk = await _ctx.Walks.FirstOrDefaultAsync(x => x.Id == id);
+
+        if (existingWalk is null) {
+            return null;
+        }
+
+        existingWalk.Name = walk.Name;
+        existingWalk.Description = walk.Description;
+        existingWalk.LengthInKm = walk.LengthInKm;
+        existingWalk.WalkImageUrl = walk.WalkImageUrl;
+        existingWalk.DifficultyId = walk.DifficultyId;
+        existingWalk.RegionId = walk.RegionId;
+
+        await _ctx.SaveChangesAsync();
+        return existingWalk;
     }
 
-    public Task<Walk?> DeleteAsync(Guid id) {
-        throw new NotImplementedException();
+    public async Task<Walk?> DeleteAsync(Guid id) {
+        var walkToBeDeleted = await _ctx.Walks
+            .Include(x => x.Region)
+            .Include(x => x.Difficulty)
+            .FirstOrDefaultAsync(x => x.Id == id);
+
+        if (walkToBeDeleted is null) {
+            return null;
+        }
+
+        _ctx.Walks.Remove(walkToBeDeleted);
+        await _ctx.SaveChangesAsync();
+        return walkToBeDeleted;
     }
 }
