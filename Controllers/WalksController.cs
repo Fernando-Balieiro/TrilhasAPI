@@ -27,8 +27,14 @@ public class WalksController : ControllerBase{
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAll() {
-        var walkList = await _repo.GetAllWalks();
+    public async Task<IActionResult> 
+        GetAll([FromQuery] string? filterOn, 
+            [FromQuery] string? filterQuery, 
+            [FromQuery] string? sortBy, 
+            [FromQuery] bool? isAscending,
+            [FromQuery] int pageNumber = 1,
+            [FromQuery] int pageSize = 1000) {
+        var walkList = await _repo.GetAllWalks(filterOn, filterQuery, sortBy, isAscending ?? true, pageNumber, pageSize);
         if (walkList == null) {
             return NoContent();
         }

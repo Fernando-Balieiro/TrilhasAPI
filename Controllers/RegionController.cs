@@ -3,12 +3,14 @@ using CaminhadasAPI.Data;
 using CaminhadasAPI.Interfaces;
 using CaminhadasAPI.Models.Domain;
 using CaminhadasAPI.Models.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CaminhadasAPI.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class RegionController : ControllerBase{
     private readonly IRegionRepository _repo;
     private readonly IMapper _mapper;
