@@ -718,3 +718,12 @@
 /home/FernandoPC/Documents/TrilhasAPI/obj/Debug/net7.0/linux-x64/CaminhadasAPI.pdb
 /home/FernandoPC/Documents/TrilhasAPI/obj/Debug/net7.0/linux-x64/CaminhadasAPI.genruntimeconfig.cache
 /home/FernandoPC/Documents/TrilhasAPI/obj/Debug/net7.0/linux-x64/ref/CaminhadasAPI.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/linux-x64/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/linux-x64/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/linux-x64/Microsoft.IdentityModel.Abstractions.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/linux-x64/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/linux-x64/Microsoft.IdentityModel.Logging.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/linux-x64/Microsoft.IdentityModel.Protocols.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/linux-x64/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/linux-x64/Microsoft.IdentityModel.Tokens.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/linux-x64/System.IdentityModel.Tokens.Jwt.dll

@@ -86,3 +86,17 @@
 /home/FernandoPC/Documents/TrilhasAPI/obj/Debug/net7.0/ref/CaminhadasAPI.dll
 /home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/AutoMapper.dll
 /home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/Microsoft.Extensions.Identity.Core.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/Microsoft.Extensions.Identity.Stores.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/Microsoft.Extensions.Options.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/home/FernandoPC/Documents/TrilhasAPI/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll
