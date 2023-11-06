@@ -11,7 +11,14 @@
     <list default="true" id="ff5775bf-47d3-42d5-8ccc-5a250be3a642" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CaminhadasAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaminhadasAPI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/CaminhadasAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net7.0/CaminhadasAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net7.0/CaminhadasAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/CaminhadasAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/ref/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/ref/CaminhadasAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net7.0/refint/CaminhadasAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net7.0/refint/CaminhadasAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +151,8 @@
       <workItem from="1699132081240" duration="1437000" />
       <workItem from="1699147635341" duration="3948000" />
       <workItem from="1699193791817" duration="10515000" />
-      <workItem from="1699227825460" duration="3146000" />
+      <workItem from="1699227825460" duration="3795000" />
+      <workItem from="1699241064416" duration="1599000" />
     </task>
     <servers />
   </component>
