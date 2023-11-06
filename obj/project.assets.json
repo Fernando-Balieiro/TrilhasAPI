@@ -2067,9 +2067,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/FernandoPC/Documents/TrilhasAPI/CaminhadasAPI.csproj",
-      "projectName": "CaminhadasAPI",
-      "projectPath": "/home/FernandoPC/Documents/TrilhasAPI/CaminhadasAPI.csproj",
+      "projectUniqueName": "/home/FernandoPC/Documents/TrilhasAPI/TrilhasAPI.csproj",
+      "projectName": "TrilhasAPI",
+      "projectPath": "/home/FernandoPC/Documents/TrilhasAPI/TrilhasAPI.csproj",
       "packagesPath": "/home/FernandoPC/.nuget/packages/",
       "outputPath": "/home/FernandoPC/Documents/TrilhasAPI/obj/",
       "projectStyle": "PackageReference",

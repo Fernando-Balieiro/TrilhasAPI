@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaminhadasAPI", "CaminhadasAPI.csproj", "{12C15201-6A4C-49AB-AA3D-4AE6F5F066DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrilhasAPI", "TrilhasAPI.csproj", "{12C15201-6A4C-49AB-AA3D-4AE6F5F066DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

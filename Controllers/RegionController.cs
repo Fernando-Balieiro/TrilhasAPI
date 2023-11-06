@@ -10,7 +10,6 @@ namespace CaminhadasAPI.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-[Authorize]
 public class RegionController : ControllerBase{
     private readonly IRegionRepository _repo;
     private readonly IMapper _mapper;
@@ -21,6 +20,7 @@ public class RegionController : ControllerBase{
     }
 
     [HttpGet]
+    [Authorize(Roles = "Reader")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> GetAllRegions() {
         var regions = await _repo.GetAllRegions();
@@ -46,6 +46,7 @@ public class RegionController : ControllerBase{
     [Route("{id:guid}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [Authorize(Roles = "Writer")]
     public async Task<IActionResult> GetRegionsById([FromRoute] Guid? id) {
         if (id == null) {
             return NotFound("Id passed was null");
@@ -68,6 +69,7 @@ public class RegionController : ControllerBase{
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [Authorize(Roles = "Writer")]
     public async Task<IActionResult> CreateRegion([FromBody] RegionDto? regionRequestDto) {
         if (regionRequestDto == null) {
             return BadRequest("Você deve passar uma região");
@@ -97,6 +99,7 @@ public class RegionController : ControllerBase{
     [Route("{id:guid}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [Authorize(Roles = "Writer")]
     public async Task<IActionResult> ChangeRegion([FromRoute] Guid? id, [FromBody] RegionDto? updateRegionDto) {
         // var regionDomainModel = new Region {
         //     Code = updateRegionDto.Code,
@@ -126,6 +129,7 @@ public class RegionController : ControllerBase{
     [Route("{id:guid}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [Authorize(Roles = "Writer, Reader")]
     public async Task<IActionResult> DeleteRegion([FromRoute] Guid? id) {
         var regionDomainModel = await _repo.Delete(id);
 

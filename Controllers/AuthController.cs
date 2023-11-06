@@ -1,3 +1,4 @@
+using CaminhadasAPI.Interfaces;
 using CaminhadasAPI.Models.DTOs;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -8,9 +9,11 @@ namespace CaminhadasAPI.Controllers;
 [ApiController]
 public class AuthController : ControllerBase {
     private readonly UserManager<IdentityUser> _userManager;
+    private readonly ITokenRepository _repo;
 
-    public AuthController(UserManager<IdentityUser> userManager) {
+    public AuthController(UserManager<IdentityUser> userManager, ITokenRepository repo) {
         _userManager = userManager;
+        _repo = repo;
     }
 
     [HttpPost]
@@ -37,5 +40,29 @@ public class AuthController : ControllerBase {
         }
 
         return BadRequest("Algo deu errado");
+    }
+    
+    [HttpPost]
+    [Route("Login")]
+    public async Task<IActionResult> Login([FromBody] LoginRequestDto loginRequestDto) {
+        var user = await _userManager.FindByEmailAsync(loginRequestDto.UserName);
+
+        if (user != null) {
+            var checkPasswordResult = await _userManager.CheckPasswordAsync(user, loginRequestDto.Password);
+
+            if (checkPasswordResult) {
+                //Get Roles of user
+                var roles = await _userManager.GetRolesAsync(user);
+                if (roles != null) {
+                    var jwtToken = _repo.CreateJwtToken(user, roles.ToList());
+
+                    var response = new LoginResponseDto() {
+                        JwtToken = jwtToken
+                    };
+                    return Ok(response);
+                }
+            }
+        }
+        return BadRequest("Usuário ou senha errados");
     }
 }

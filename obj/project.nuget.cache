@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q3VAwLkmbWrIIVnmr8DN8u1FVuGZshWugOEbNmeaVOW7CZGok+eoN2by2+dOu0e+UpiwBtdDHVcUSw6RLduEVA==",
+  "dgSpecHash": "HG9V6Ap7CemImDYliEKBes5dyhhmiO6FiGbFMPDjgSi0MJ21IZG3piMlL7l1l+VFATxg5+WIE3gtyqddKxhGxA==",
   "success": true,
-  "projectFilePath": "/home/FernandoPC/Documents/TrilhasAPI/CaminhadasAPI.csproj",
+  "projectFilePath": "/home/FernandoPC/Documents/TrilhasAPI/TrilhasAPI.csproj",
   "expectedPackageFiles": [
     "/home/FernandoPC/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/home/FernandoPC/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

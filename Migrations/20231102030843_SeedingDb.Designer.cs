@@ -25,7 +25,7 @@ namespace CaminhadasAPI.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("CaminhadasAPI.Models.Domain.Difficulty", b =>
+            modelBuilder.Entity("TrilhasAPI.Models.Domain.Difficulty", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -67,7 +67,7 @@ namespace CaminhadasAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CaminhadasAPI.Models.Domain.Region", b =>
+            modelBuilder.Entity("TrilhasAPI.Models.Domain.Region", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -113,7 +113,7 @@ namespace CaminhadasAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CaminhadasAPI.Models.Domain.Walk", b =>
+            modelBuilder.Entity("TrilhasAPI.Models.Domain.Walk", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -148,15 +148,15 @@ namespace CaminhadasAPI.Migrations
                     b.ToTable("Walks");
                 });
 
-            modelBuilder.Entity("CaminhadasAPI.Models.Domain.Walk", b =>
+            modelBuilder.Entity("TrilhasAPI.Models.Domain.Walk", b =>
                 {
-                    b.HasOne("CaminhadasAPI.Models.Domain.Difficulty", "Difficulty")
+                    b.HasOne("TrilhasAPI.Models.Domain.Difficulty", "Difficulty")
                         .WithMany()
                         .HasForeignKey("DifficultyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CaminhadasAPI.Models.Domain.Region", "Region")
+                    b.HasOne("TrilhasAPI.Models.Domain.Region", "Region")
                         .WithMany()
                         .HasForeignKey("RegionId")
                         .OnDelete(DeleteBehavior.Cascade)

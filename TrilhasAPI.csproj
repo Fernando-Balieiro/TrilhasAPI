@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <RootNamespace>CaminhadasAPI</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -25,6 +26,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Images\" />
       <Folder Include="Tests\" />
     </ItemGroup>
 
